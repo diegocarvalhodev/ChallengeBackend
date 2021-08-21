@@ -29,7 +29,10 @@ namespace ChallengeBackendApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ChallengeContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("ChallengeConnection")));
-            services.AddControllers();
+            services
+                .AddControllers()
+                .AddNewtonsoftJson();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChallengeBackendApi", Version = "v1" });

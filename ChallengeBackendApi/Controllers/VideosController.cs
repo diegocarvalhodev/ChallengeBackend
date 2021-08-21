@@ -3,6 +3,7 @@ using ChallengeBackendApi.Data;
 using ChallengeBackendApi.Data.Dtos;
 using ChallengeBackendApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,6 +66,8 @@ namespace ChallengeBackendApi.Controllers
 
             return Ok(video);
         }
+
+
 
     }
 }
